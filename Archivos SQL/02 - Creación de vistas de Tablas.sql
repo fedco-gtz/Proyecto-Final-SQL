@@ -1,0 +1,52 @@
+-- Creación de vista de la tabla CATALOGO
+CREATE VIEW aflix.Vista_Catalogo AS
+SELECT
+    CATALOGO_ID,
+    NOMBRES,
+    DESCRIPCION,
+    IMG,
+    ACLAMADO,
+    GENERO_PELICULAS_ID,
+    DIRECTOR,
+    ESCRITOR,
+    DURACION,
+    IDIOMA,
+    TRAILER,
+    ESTRENO,
+    RECAUDACION,
+    PRESUPUESTO,
+    BANNER
+FROM aflix.CATALOGO;
+
+-- Creación de vista de la tabla ROLES
+CREATE VIEW aflix.Vista_Roles AS
+SELECT
+    ROLES_ID,
+    TIPO
+FROM aflix.ROLES;
+
+-- Creación de vista de la tabla USUARIOS
+CREATE VIEW aflix.Vista_Usuarios AS
+SELECT
+    USUARIOS_ID,
+    NOMBRE,
+    APELLIDO,
+    EMAIL,
+    CONTRASENIA,
+    FECHA_NACIMIENTO,
+    PAIS,
+    TERMINOS_CONDICIONES,
+    ROLES_ID,
+    GENERO_PELICULAS_ID_1,
+    GENERO_PELICULAS_ID_2,
+    GENERO_PELICULAS_ID_3,
+    GENERO_PELICULAS_ID_4,
+    GENERO_PELICULAS_ID_5
+FROM aflix.USUARIOS;
+
+-- Creación de vista de la tabla GENERO PELICULAS
+CREATE VIEW aflix.Vista_Genero_Peliculas AS
+SELECT
+    GENERO_PELICULAS_ID,
+    GENERO
+FROM aflix.GENERO_PELICULAS;
